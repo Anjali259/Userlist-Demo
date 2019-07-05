@@ -1,0 +1,21 @@
+<h1>UserList</h1>
+<div class='table-responsive'>
+    <table class='table'>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Age</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor = "let userlist of userlists">
+                <td>{{userlist.id}}</td>
+                <td><a [routerLink]="['/userlist', userlist.id]">{{userlist.name}}</a></td>
+                <td>{{userlist.age}}</td>
+            </tr>
+            
+        </tbody>
+    </table>
+</div>
+<router-outlet></router-outlet>
