@@ -23,6 +23,7 @@ export class UserComponent implements OnInit {
     {"id": 5, "name": "Dave Buster", "age": 25},
   ]; */
 
+//this is to retrieve userlist data from service file
   ngOnInit() {
     this.userlists = this._userlistservice.getUsers();
   }
