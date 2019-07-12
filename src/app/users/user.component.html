@@ -9,12 +9,17 @@
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor = "let userlist of userlists">
+            <tr *ngFor = "let userlist of userlists; let i=index">
                 <td>{{userlist.id}}</td>
                 <td><a [routerLink]="['/userlist', userlist.id]">{{userlist.name}}</a></td>
                 <td>{{userlist.age}}</td>
-            </tr>
-            
+          
+
+       
+                <button class="btn btn-primary" [routerLink]="['/userlist', userlist.id]" >Edit</button>
+                <button class="btn btn-danger" >Delete</button>
+    </tr>
+     
         </tbody>
     </table>
 </div>

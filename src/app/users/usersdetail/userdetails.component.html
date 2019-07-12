@@ -1,0 +1,52 @@
+<h3>UserList Detail</h3>
+
+
+You have selected id: {{ userlistID }}
+
+<!--<div class='table-responsive'>
+    <table class='table' style="width: 30%;">
+    <tbody>
+        <tr>
+            <td>User ID: {{userlist.id}}</td>
+        </tr>
+
+        <tr>
+            <td>User Name:{{userlist.name}}</td>
+        </tr>
+        <tr>
+            <td>User Age: {{userlist.age}}</td>
+
+        </tr>
+    </tbody>
+</table>
+</div>
+-->
+<div class="container">
+        <div class="form-group" style="width: 250px;">
+
+<input type="number" disabled name="id"  [(ngModel)]="userlist.id" class="form-control" >
+    
+        
+<input type="text" name="username" [(ngModel)]="userlist.name" class="form-control">  
+
+
+<input type="number" name="age" [(ngModel)]="userlist.age"  class="form-control">
+
+</div>
+</div>
+
+
+<div class="form-group">
+        <button class="btn btn-dark" (click)="updateTodo(userlist)">Update Data</button>
+      </div>
+      
+      <button class="btn-primary" (click)="GoBack()" >Back</button>
+
+<button class="btn-primary" (click)="GoPrevous()">Previous</button>
+<button class="btn-primary" (click)="GoNext()">Next</button>
+<hr style="width: 20px;">
+
+
+<router-outlet></router-outlet>
+   
+

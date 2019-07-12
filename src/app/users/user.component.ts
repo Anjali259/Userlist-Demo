@@ -1,14 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 import { UserlistserviceService } from '../userlistservice.service';
+import { userlist } from './userlist';
+
 
 @Component({
-  selector: 'app-userlist',
-  templateUrl: './userlist.component.html',
-  styleUrls: ['./userlist.component.css']
+  selector: 'app-user',
+  templateUrl: './user.component.html',
+  styleUrls: ['./user.component.css']
 })
-export class UserlistComponent implements OnInit {
+export class UserComponent implements OnInit {
 
   public userlists = [];
+  userlist: userlist[];
+  
   constructor(private _userlistservice: UserlistserviceService) { }
 
  /* userlists = [
@@ -22,5 +26,6 @@ export class UserlistComponent implements OnInit {
   ngOnInit() {
     this.userlists = this._userlistservice.getUsers();
   }
+
 
 }
