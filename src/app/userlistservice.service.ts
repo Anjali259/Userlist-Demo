@@ -7,7 +7,7 @@ import { userlist } from './users/userlist';
 })
 export class UserlistserviceService {
 
-  userlist :[
+  users :[
     {"id": 1, "name": "Ian Mac", "age": 27},
     {"id": 2, "name": "Herlin Dave", "age": 29},
     {"id": 3, "name": "John Bravo", "age": 32},
@@ -64,7 +64,7 @@ get() {
 
 put(id: number, values: Object = {}): userlist {
   let userlist = this.getuserbyid(id);
-  if (!userlist) {
+  if (!this.users) {
     return null;
   }
   Object.assign(userlist, values);
@@ -72,7 +72,7 @@ put(id: number, values: Object = {}): userlist {
 }
 
 getuserbyid(id: number): userlist { 
-  return this.userlist
+  return this.users
   .filter(userlist => userlist.id === id)
   .pop();
 }

@@ -24,13 +24,13 @@ You have selected id: {{ userlistID }}
 <div class="container">
         <div class="form-group" style="width: 250px;">
 
-<input type="number" disabled name="id"  [(ngModel)]="userlist.id" class="form-control" >
+<input type="number" disabled name="id"  [(ngModel)]="userlist.id" value={{userlist.id}} class="form-control" >
     
         
-<input type="text" name="username" [(ngModel)]="userlist.name" class="form-control">  
+<input type="text" name="username" [(ngModel)]="userlist.name" value={{userlist.name}} class="form-control">  
 
 
-<input type="number" name="age" [(ngModel)]="userlist.age"  class="form-control">
+<input type="number" name="age" [(ngModel)]="userlist.age" value={{userlist.age}}  class="form-control">
 
 </div>
 </div>

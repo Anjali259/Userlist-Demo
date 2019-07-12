@@ -67,11 +67,10 @@ getUsers(){
 }
  
 updateTodo(userlist) {
-     let newvalue = this.userlist;
-    console.log(newvalue);
-    this._userservice.put(newvalue);
-  }
- 
+  let newvalue = this.userlist;
+ console.log(newvalue);
+ this._userservice.put(newvalue);
+}
 
 
 //  showeditpage(){
