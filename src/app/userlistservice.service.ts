@@ -71,11 +71,25 @@ put(id: number, values: Object = {}): userlist {
   return userlist;
 }
 
-getuserbyid(id: number): userlist { 
+getuserbyid(id: number): userlist {
+  console.log("this.users",this.users)  
+  return new userlist(1,'Ian Mac',27);
+  }
+
+/* getuserbyid(id: number): userlist { 
+  console.log("this.users",this.users);
+  return this.users
+  .filter(userlist => userlist.id === id)
+  .pop();
+  }
+*/
+ 
+
+/*getuserbyid(id: number): userlist { 
   return this.users
   .filter(userlist => userlist.id === id)
   .pop();
 }
-
+*/
 
 }
