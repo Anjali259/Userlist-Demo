@@ -65,13 +65,21 @@ export class UserdetailsComponent implements OnInit {
 getUsers(){
   this.userlists = this._userservice.getUsers();
 }
+
  
 updateTodo(userlist) {
   let newvalue = this.userlist;
  console.log(newvalue);
  this._userservice.put(newvalue);
 }
+/*
 
+updateTodo(userlist) {
+  let newvalue = this.userlist;
+  console.log(newvalue);
+  this._userservice.getuserbyid(1);
+  }
+  */
 
 //  showeditpage(){
   //  this.router.navigate(['useredit'], {relativeTo: this._activatedroute}); //child routes used here..
