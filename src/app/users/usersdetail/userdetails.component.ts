@@ -13,8 +13,10 @@ import { userlist } from '../userlist';
 export class UserdetailsComponent implements OnInit {
 
  userlistID;
+ 
  public users;
- userlists: userlist[];
+
+ userlists: Array<number | string | number >;
 
    public userlist; // Userlist is a member of aray of userlists here so we need to specific define this name nly for fetchng data for details.
   
@@ -31,7 +33,7 @@ export class UserdetailsComponent implements OnInit {
     //let users = this._userservice.getUsers();
   //  this.userlist = users.find(u=>u.id==this.userlistID)
    // this.userlist = this.users.filter(u=>u.id==this.userlistID);
-   this.userlist =  this._userservice.getUsers().filter(u => u.id == this.userlistID)[0];
+   this.userlist =  this._userservice.userlist.filter(u => u.id == this.userlistID)[0];
   
   } )  }
 
@@ -70,7 +72,7 @@ getUsers(){
 updateTodo(userlist) {
   let newvalue = this.userlist;
  console.log(newvalue);
- this._userservice.put(newvalue);
+userlist= this._userservice.put(newvalue);
 }
 /*
 

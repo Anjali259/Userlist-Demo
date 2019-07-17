@@ -10,7 +10,7 @@ import { userlist } from './userlist';
 })
 export class UserComponent implements OnInit {
 
-  public userlists = [];
+   userlists: any[];
   userlist: userlist[];
   
   constructor(private _userlistservice: UserlistserviceService) { }
